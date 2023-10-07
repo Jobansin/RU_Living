@@ -25,12 +25,12 @@ collection = db[os.environ['COLLECTION_NAME']] #select collection
 
 
 
-objToPush = '{}'
+#objectToPush = '{}'
 headers = []
 counter = 0
 with open("output.csv", "r") as file:
     reader = csv.reader(file) #open csv
-    
+    objectToPush = '{}'
     
     for row in reader:
         
@@ -40,12 +40,14 @@ with open("output.csv", "r") as file:
             continue
 
         if(counter % 2 == 0):
+            temp = json.loads(objectToPush)
             
             for j in range(0, len(headers)): #for each of the headers
-                
-                z = json.loads(objToPush)
-                z.update({headers[j] : row[j]})
-                print(json.dumps(z))
+                temp.update({headers[j] : row[j]})
+            
+            objectToPush = temp
+            print(json.dumps(objectToPush))
+            objectToPush = '{}'
             
             
         counter += 1
