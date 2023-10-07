@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 import csv
 
+print("Installing packages") 
+setup.install()
 
 mainLandingURL = "http://ruoncampus.rutgers.edu/facilities/browse-by-campus/"
 
