@@ -29,11 +29,20 @@ file = open('output.csv', 'w')
 writer = csv.writer(file)
 writer.writerow(['Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availability', 'Contract Type']) #create CSV file
 
-infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6]
+infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p')
 
-print(infoAll[2])
-#for info in infoAll 
- #   type = maxStudents = floors = rmSize = avail = contract = None
+
+for info in infoAll[1:]:
+    type = maxStudents = floors = rmSize = avail = contract = None
     
+    infoSplit = info.text.split(":") #split by the :
+    infoSplit = infoSplit[1].replace("\xa0","")
     
-  #  print(info)
+    type = infoSplit
+    
+    print(type)
+    #for split in infoSplit[1:]:
+     #   print(split)
+
+ 
+    
