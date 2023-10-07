@@ -3,6 +3,7 @@ import os
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import csv
+import json
 
 
 load_dotenv() #loading env vars
@@ -24,16 +25,38 @@ collection = db[os.environ['COLLECTION_NAME']] #select collection
 
 
 
-objToPush = []
+objToPush = '{}'
 headers = []
-with open("output.csv", "r") as f:
-    reader = csv.reader(f, delimiter="\r") #open csv
+counter = 0
+with open("output.csv", "r") as file:
+    reader = csv.reader(file) #open csv
     
-    for i, line in enumerate(reader): #iterate through it
+    
+    for row in reader:
         
-        if(i == 0): #get the first line of headers
-            headers = line
-            print(headers[2])
+        if (counter == 0):
+            headers = row
+            counter += 1
+            continue
+
+        if(counter % 2 == 0):
+            
+            for j in range(0, len(headers)): #for each of the headers
+                
+                z = json.loads(objToPush)
+                z.update({headers[j] : row[j]})
+                print(json.dumps(z))
+            
+            
+        counter += 1
+        
+        
+
+    #for i, line in enumerate(reader): #iterate through it
+        
+       ## if(i == 0): #get the first line of headers
+         #   headers = readlines().text[2:-2]
+          #  print(headers)
         
         #if(i % 2 == 0): #even numbers since CSV has blank odd numbers for some reason
             #print('line[{}] = {}'.format(i, line))
