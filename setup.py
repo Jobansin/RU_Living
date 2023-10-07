@@ -11,3 +11,7 @@ def install():
                         __import__(package)
                 except ImportError:
                         subprocess.run(["python", "-m", "pip", "install", package])  
+                        
+                        
+                        
+#python -c 'import setup; setup.install()'

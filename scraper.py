@@ -4,7 +4,7 @@ import requests
 import csv
 
 print("Installing packages") 
-setup.install()
+#setup.install()
 
 mainLandingURL = "http://ruoncampus.rutgers.edu/facilities/browse-by-campus/"
 
@@ -22,10 +22,18 @@ headers = {
 page_to_scrape = requests.get(allenHallURL,headers=headers) 
 residenceSoup = BeautifulSoup(page_to_scrape.text, 'html.parser') 
 
+
+#print(residenceSoup)
+
 file = open('output.csv', 'w')
 writer = csv.writer(file)
 writer.writerow(['Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availability', 'Contract Type']) #create CSV file
 
-info = residenceSoup.findAll('div', attrs={"class":"pb_wrapper"})[6]
+infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6]
 
-print(info)
+print(infoAll[2])
+#for info in infoAll 
+ #   type = maxStudents = floors = rmSize = avail = contract = None
+    
+    
+  #  print(info)
