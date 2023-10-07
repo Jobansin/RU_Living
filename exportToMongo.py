@@ -22,60 +22,25 @@ except Exception as e:
 db = client[os.environ['DATABASE_NAME']] #select database
 collection = db[os.environ['COLLECTION_NAME']] #select collection
 
-
-
-
-#objectToPush = '{}'
 headers = []
 counter = 0
 with open("output.csv", "r") as file:
     reader = csv.reader(file) #open csv
-    objectToPush = '{}'
     
-    for row in reader:
-        
-        if (counter == 0):
+    for row in reader: 
+        if (counter == 0): #get the first row of headers
             headers = row
             counter += 1
             continue
 
-        if(counter % 2 == 0):
-            temp = json.loads(objectToPush)
+        if(counter % 2 == 0): #get the even rows (odd rows are empty for some reason)
+            temp = json.loads(objectToPush) #load the empty JSON
             
             for j in range(0, len(headers)): #for each of the headers
-                temp.update({headers[j] : row[j]})
+                temp.update({headers[j] : row[j]}) #get it linked to the proper data and push it to the JSON
             
-            objectToPush = temp
-            print(json.dumps(objectToPush))
-            objectToPush = '{}'
-            
+            objectToPush = temp 
+            collection.insert_one(objectToPush) #push to database #TODO SHOULD PROB MAKE THE HALLS THE UNIQUE _id
+            objectToPush = '{}' #clear the JSON for next loop
             
         counter += 1
-        
-        
-
-    #for i, line in enumerate(reader): #iterate through it
-        
-       ## if(i == 0): #get the first line of headers
-         #   headers = readlines().text[2:-2]
-          #  print(headers)
-        
-        #if(i % 2 == 0): #even numbers since CSV has blank odd numbers for some reason
-            #print('line[{}] = {}'.format(i, line))
-            #print(len(headers))
-            #for j in range(0, len(headers)): #for each of the headers
-                #print(len(headers))
-                    
-                    
-
-            
-
-
-        
-
-        
-        
-
-
-
-#collection.insert_one({"test": "test"})
