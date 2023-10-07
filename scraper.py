@@ -15,7 +15,7 @@ buschBuildings = ['allen', 'barr', 'busch-engineering-science-and-technology-bes
 buschBuildings1 = ['mccormick']
 
 collegeBuildings1 = ['sojourner_truth']
-campusArr = [buschBuildings]
+campusArr = [collegeBuildings]
 
 for campus in campusArr:
     
@@ -50,6 +50,10 @@ for campus in campusArr:
         dataArray.append(name)
         print(name)
         
+        if(name.find("Sojourner") != -1): #has an extra paragraph in the front
+            infoAll = infoAll[1:]
+        
+        #print(infoAll)
         for info in infoAll[1:7]: #the quads have extra stuff at the end of their html and mccormick (busch)
             
             #print(infoAll)
