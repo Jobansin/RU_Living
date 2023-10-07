@@ -2,6 +2,7 @@ import 'survey-core/defaultV2.min.css';
 import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { major } from './majors';
+import { useCallback, useState } from 'react';
 
 const surveyJson = {
   elements: [{
@@ -78,15 +79,50 @@ const surveyJson = {
       { text: 'Both' },
     ]
   },
+  {
+    type: "radiogroup",
+    name: "food",
+    title: "Do you prefer a campus with a lot of food options?",
+    choices: [
+      { text: 'yes' },
+      { text: 'no' },
+    ],
+    isRequired: true
+  },
+  {
+    type: "radiogroup",
+    name: "town",
+    title: "Do you prefer a campus that is downtown or not?",
+    choices: [
+      { text: 'yes' },
+      { text: 'no' },
+      { text: 'neutral' },
+    ],
+    isRequired: true
+  },
 ]
 };
 
+
 function App() {
+  const [surveyResults, setSurveyResults] = useState(null);
   const survey = new Model(surveyJson);
+
+  const onComplete = useCallback((sender) => {
+    setSurveyResults(JSON.stringify(sender.data));
+  }, []);
+
+  survey.onComplete.add(onComplete);
   return (
     <div>
-      <Survey model={survey} />
-      {console.log(survey.data)}
+      {surveyResults ? (
+        <div>
+          <h2>Survey Results:</h2>
+          <p>{surveyResults}</p>
+        </div>
+      ) : (
+        <Survey model={survey} />
+      )}
     </div>
   );
 }
