@@ -3,9 +3,24 @@ import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { major } from './majors';
 import { useCallback, useState } from 'react';
+import MainPage from './MainPage';
 
 const surveyJson = {
-  elements: [{
+  elements: 
+  [{
+    type: "radiogroup",
+    name: "town",
+    title: "What year are you?",
+    choices: [
+      { text: 'freshman' },
+      { text: 'sophomore' },
+      { text: 'junior' },
+      { text: 'senior' },
+      { text: 'graduate' },
+    ],
+    isRequired: true
+  },
+  {
     name: "environment",
     title: "Do you prefer a quiet or loud environment?",
     type: "radiogroup",
@@ -103,25 +118,35 @@ const surveyJson = {
 ]
 };
 
-
 function App() {
   const [surveyResults, setSurveyResults] = useState(null);
+  const [formStarted, setFormStarted] = useState(false)
   const survey = new Model(surveyJson);
 
   const onComplete = useCallback((sender) => {
     setSurveyResults(JSON.stringify(sender.data));
   }, []);
 
+
+
+  const handleStartForm = () => {
+    setFormStarted(true)
+  }
+
   survey.onComplete.add(onComplete);
   return (
     <div>
-      {surveyResults ? (
+      {formStarted ? (
+        surveyResults ? (
         <div>
           <h2>Survey Results:</h2>
           <p>{surveyResults}</p>
         </div>
       ) : (
         <Survey model={survey} />
+      )
+      ) : (
+        <MainPage onStartTest={handleStartForm}/>
       )}
     </div>
   );
