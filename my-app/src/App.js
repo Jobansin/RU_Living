@@ -3,9 +3,24 @@ import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
 import { major } from './majors';
 import { useCallback, useState } from 'react';
+import MainPage from './MainPage';
 
 const surveyJson = {
-  elements: [{
+  elements: 
+  [{
+    type: "radiogroup",
+    name: "town",
+    title: "What year are you?",
+    choices: [
+      { text: 'freshman' },
+      { text: 'sophomore' },
+      { text: 'junior' },
+      { text: 'senior' },
+      { text: 'graduate' },
+    ],
+    isRequired: true
+  },
+  {
     name: "environment",
     title: "Do you prefer a quiet or loud environment?",
     type: "radiogroup",
@@ -100,28 +115,56 @@ const surveyJson = {
     ],
     isRequired: true
   },
+  {
+    type: "radiogroup",
+    name: "town",
+    title: "What type of housing do you prefer?",
+    choices: [
+      { text: 'Traditional Residence Hall' },
+      { text: 'Apartment' },
+      { text: 'Suite' },
+      { text: 'neutral' },
+    ],
+    isRequired: true
+  },
 ]
 };
 
-
 function App() {
   const [surveyResults, setSurveyResults] = useState(null);
+  const [formStarted, setFormStarted] = useState(false)
   const survey = new Model(surveyJson);
 
   const onComplete = useCallback((sender) => {
     setSurveyResults(JSON.stringify(sender.data));
   }, []);
 
+
+
+  const handleStartForm = () => {
+    setFormStarted(true)
+  }
+
   survey.onComplete.add(onComplete);
   return (
     <div>
-      {surveyResults ? (
+      {formStarted ? (
+        surveyResults ? (
         <div>
           <h2>Survey Results:</h2>
           <p>{surveyResults}</p>
         </div>
       ) : (
-        <Survey model={survey} />
+        <div>
+          <div class="logo">
+            <img src="ru.png" width="120px" height="60px"/>
+            <h1 class="title">Living</h1>
+          </div>
+          <Survey model={survey}/>
+        </div> 
+      )
+      ) : (
+        <MainPage onStartTest={handleStartForm}/>
       )}
     </div>
   );
