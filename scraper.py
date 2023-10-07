@@ -17,10 +17,7 @@ campusArr = [cookdougBuildings, liviBuildings, collegeBuildings, buschBuildings]
 for campus in campusArr:
     
     for building in campus:
-        placeURL = "http://ruoncampus.rutgers.edu/" + building.replace(" ","-")
-        #print(building)
-    
-        #placeURL = "http://ruoncampus.rutgers.edu/buell-apartments/" #url
+        placeURL = "http://ruoncampus.rutgers.edu/" + building.replace(" ","-") #getting urls
 
         #getting htmls
         headers = {
@@ -31,39 +28,23 @@ for campus in campusArr:
         page_to_scrape = requests.get(placeURL,headers=headers) 
         residenceSoup = BeautifulSoup(page_to_scrape.text, 'html.parser') 
 
-        infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p') #overview data
+        infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p') #overview data in p headers
         dataArray = []
-        counter = 0
-          
-                
-        #print(infoAll)
-        
-        #infoAll[:7]
-        #infoAll[-6:]
-        
-        #print(infoAll)
-        
+
+        #get the name from the first        
         name = infoAll[0].find('span').text
         dataArray.append(name)
         print(name)
         
-        if(name.find("Sojourner") != -1): #has an extra paragraph in the front
+        if(name.find("Sojourner") != -1): #has an extra paragraph in the front, so offset the data by one
             infoAll = infoAll[1:]
         
-        #print(infoAll)
-        for info in infoAll[1:7]: #the quads have extra stuff at the end of their html and mccormick (busch)
+        for info in infoAll[1:7]: #remove the name from the front then get the next 6 data paragraphs #the quads have extra stuff at the end of their html and mccormick (busch) 
             
-            #print(infoAll)
-            #if counter == 0: #get the name
-            #     counter += 1
-               # print(data)
-                #dataArray.append(data)
-                #continue
-            #print(info.text)
-            infoSplit = info.text.split(":") #split by the : and get rest of attributes
-            #print(info)
-            data = infoSplit[1].replace("\xa0","")
-            #print(data)
-            dataArray.append(data)
+            infoSplit = info.text.split(":") #split the data by the : (EX = Number of Students: 288)
+
+            data = infoSplit[1].replace("\xa0","") #get the second element [Number of Students, 288]
+
+            dataArray.append(data) #add to array to be saved and pushed later
 
         writer.writerow(dataArray) #write it to the csv
