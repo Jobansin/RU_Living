@@ -9,8 +9,12 @@ writer.writerow(['Hall', 'Type', 'Max Students', '# of Floors', 'Avg Room Size',
 
 cookdougBuildings = ['Helyar', 'Henderson', 'Jameson', 'Katzenbach', 'Lippincott', 'New Gibbons', 'Newell', 'Nicholas', 'Perry', 'Starkey', 'Voorhees', 'Woodbury Bunting-Cobb']
 liviBuildings = ['Livingston Apartments', 'Lynton Towers (North)', 'Lynton Towers (South)','Quad I', 'Quad II', 'Quad III']
+collegeBuildings = ['brett', 'campbell', 'clothier', 'demarest', 'frelinghuysen', 'hardenbergh', 'hegeman', 'honors college residence hall', 'leupp', 'mettler', 'pell', 'sojourner_truth', 'stonier', 'tinsley', 'university center', 'wessels']
+buschBuildings = ['allen', 'barr', 'best', 'buell', 'crosby', 'johnson', 'judson', 'mattia', 'marvin', 'mccormick', 'metzger', 'morrow', 'nicholas', 'richardson', 'silvers', 'thomas', 'winkler']
 
-campusArr = [cookdougBuildings, liviBuildings]
+
+collegeBuildings1 = ['sojourner_truth']
+campusArr = [collegeBuildings]
 
 for campus in campusArr:
     
@@ -32,16 +36,24 @@ for campus in campusArr:
         infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p') #overview data
         dataArray = []
         counter = 0
-                    
+          
+                
         #print(infoAll)
-        for info in infoAll[:7]: #the quads have extra stuff at the end of their html
+        
+        #infoAll[:7]
+        #infoAll[-6:]
+        name = infoAll[0].find('span').text
+        dataArray.append(name)
+        print(name)
+        
+        for info in infoAll[-6:]: #the quads have extra stuff at the end of their html
             
-            if counter == 0: #get the name
-                data = info.find('span').text#.replace("&nbsp","")
-                counter += 1
-                print(data)
-                dataArray.append(data)
-                continue
+            #if counter == 0: #get the name
+              #  data = info.find('span').text#.replace("&nbsp","")
+             #   counter += 1
+               # print(data)
+                #dataArray.append(data)
+                #continue
             
             infoSplit = info.text.split(":") #split by the : and get rest of attributes
             #print(infoSplit)
