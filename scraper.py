@@ -2,15 +2,9 @@ import setup
 from bs4 import BeautifulSoup
 import requests
 import csv
-#import array
-
-print("Installing packages") 
-#setup.install()
 
 mainLandingURL = "http://ruoncampus.rutgers.edu/facilities/browse-by-campus/"
-
 buschURL = "http://ruoncampus.rutgers.edu/facilities/browse-by-campus/explore-rutgers-campus-housing-facilities-busch-campus/"
-
 allenHallURL = "http://ruoncampus.rutgers.edu/allen-hall/"
 
 #getting htmls
@@ -23,24 +17,28 @@ headers = {
 page_to_scrape = requests.get(allenHallURL,headers=headers) 
 residenceSoup = BeautifulSoup(page_to_scrape.text, 'html.parser') 
 
-
-#print(residenceSoup)
-
 file = open('output.csv', 'w')
 writer = csv.writer(file)
-writer.writerow(['Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availability', 'Contract Type']) #create CSV file
+writer.writerow(['Hall', 'Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availability', 'Contract Type']) #create CSV file
 
 infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p')
-
 dataArray = []
 type = maxStudents = floors = rmSize = avail = contract = None
-for info in infoAll[1:]:
+counter = 0
+for info in infoAll:
+    
+    if counter == 0:
+        data = info.find('span').text
+        counter += 1
+        dataArray.append(data)
+        continue
     
     infoSplit = info.text.split(":") #split by the :
     data = infoSplit[1].replace("\xa0","")
     
     dataArray.append(data)
 
+writer.writerow(dataArray)
 
-
-print(dataArray)
+#print(len(dataArray))
+#print(dataArray)

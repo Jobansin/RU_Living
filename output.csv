@@ -1,1 +1,4 @@
-Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
+Hall,Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
+
+Allen Hall,Traditional Residence Hall,217,4,18 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
+
