@@ -1,52 +1,104 @@
-Hall,Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
-Helyar House,Traditional Residence Hall,40,2,12 x 15,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
-Henderson Apartments,Apartment,274,4,12 x 16,"Continuing students, Douglass Residential College (DRC)",Undergraduate Academic Year (Two Semesters)
-Jameson Hall ,Traditional Residence Hall,280," Jameson G (2 Floors), Jameson W (3 Floors)",Varies,"Continuing students, Douglass Residential College (women only)",Undergraduate Academic Year (Two Semesters)
-Katzenbach Hall,Traditional Residence Hall,236,4,11 x 14,"Douglass Residential College (Co-ed), First-year students",Undergraduate Academic Year (Two Semesters)
-Lippincott Hall ,Traditional Residence Hall,238,4,11 x 14,First-year students,Undergraduate Academic Year (Two Semesters)
-New Gibbons Hall,Traditional Residence Hall,442,3,13 x 16,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
-Newell Apartments,Apartment,982,2,13x 11,Continuing students,Undergraduate Academic Year (Two Semesters)
-Nicholas Hall ,Traditional Residence Hall,230,3,11 x 16,"First-year students, Transfer students",Undergraduate Academic Year (Two Semesters)
-Perry Hall,Traditional Residence Hall,174,4,11 x 18,First-year students,Undergraduate Academic Year (Two Semesters)
-Starkey Apartments,Apartment,384 (undergraduates/graduates),3,11 x 18,"Continuing students, Single graduate students","Undergraduate Academic Year (Two Semesters), Graduate Full Calendar Year – 12 Month Contracts (Two semesters and all breaks)"
-Voorhees Hall,Traditional Residence Hall,222,4,11 x 16,First-year students,Undergraduate Academic Year (Two Semesters)
-Woodbury Bunting-Cobb Hall,Traditional Residence Hall, 228,3,11 x 16,"First-year students, Douglass Residential College (women only), Continuing students",Undergraduate Academic Year (Two Semesters)
- Livingston Apartments,Apartments,1488,Up to 7,Varies,Continuing Students; Single Graduate,"Undergraduate Academic Year (9 months; two semesters); Graduate Academic Year (9 months); Graduate Full Calendar Year (12 months, two semesters and all breaks)"
-Lynton Towers (North and South),Traditional Residence Hall,343,7,Varies,First-year and continuing students,Undergraduate Academic Year (Two Semesters)
-Lynton Towers (North and South),Traditional Residence Hall,343,7,Varies, First-year and continuing students,Undergraduate Academic Year (Two Semesters)
-Quad I,Traditional Residence Hall,468,5,14 x 15,First-year and continuing students,Undergraduate Academic Year (Two semesters)
-Quad II,Traditional Residence Hall,505,5,14 x 15,First-year and continuing students,Undergraduate Academic Year (Two semesters)
-Quad III,Traditional Residence Hall,494,5,14 x 15, First-year and continuing students,Undergraduate Academic Year (Two semesters)
-Brett Hall,Traditional Residence Hall,216,4,16 x 12,"Continuing students, Honors students",Undergraduate Academic Year (Two Semesters)
-Campbell Hall,Traditional Residence Hall,328,6,19 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
-Clothier Hall,Traditional Residence Hall,378,8,16 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Demarest Hall,Traditional Residence Hall,170,3,Varies,"Continuing students, First-year students",Undergraduate Academic Year (Two Semesters)
-Frelinghuysen Hall,Traditional Residence Hall,328,6,19 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
-Hardenbergh Hall,Traditional Residence Hall,328,6,19 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Hegeman Hall,Traditional Residence Hall,73,3,Varies,Continuing students,Undergraduate Academic Year (Two Semesters)
-Honors College ,Traditional Residence Hall,542,5 (4 residential),Varies,First-year Honors College students,Undergraduate Academic Year (Two semesters)
-Leupp Hall,Traditional Residence Hall,39,3,18 x 11,Continuing students,Undergraduate Academic Year (Two Semesters)
-Mettler Hall ,Traditional Residence Hall, 202,4,16 x 12,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
-Pell Hall,Traditional Residence Hall,60,3,19 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
- Sojourner Truth Apartments,Apartment,436,13 residential floors,Varies,Continuing students,Undergraduate Academic Year (9 month – Two Semesters)
-Stonier Hall,Traditional Residence Hall,170,5,16 x 12,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
-Tinsley Hall,Traditional Residence Hall,203,4,16 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
-University Center at Easton Avenue Apartments,Apartment,649,12,12 x 18,Continuing students,Undergraduate Academic Year (Two Semesters)
-Wessels Hall ,Traditional Residence Hall,60,3,19 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Allen Hall,Traditional Residence Hall,217,4,18 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
-Barr Hall,Traditional Residence Hall,220,4,18 x 12,Special Interest Section,Undergraduate Academic Year (Two Semesters)
-"Busch Engineering, Science and Technology (B.E.S.T) Hall",Suite,499,4,273 square feet,"First year & continuing students in the schools of Pharmacy, Engineering, or School of Arts & Scienceswith an interest in science.",Undergraduate Academic Year (Two Semesters)
-Buell Apartments ,Apartment,348,3,9 x 15,Single graduate students,"Graduate Full Calendar Year – 12 Month Contracts (Two semesters and all breaks), Graduate Academic Year – 9 Month Contracts (Two semesters and breaks)"
-Crosby Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Johnson Apartments,Apartment,136,2,10 x 11,Single graduate students,Graduate Full Calendar Year – 12 Month Contracts (Two semesters and all breaks)
-Judson Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Mattia Hall,Traditional Residence Hall,221,4,18 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
-Marvin Apartments,Apartment,100,3,15 x 11,Graduate Family,Family Apartments (Monthly Rent)
-McCormick Suites,Suite,288,10,18 x 12,"Continuing students, First-year students, Special Interest Section",Undergraduate Academic Year (Two Semesters)
-Metzger Hall,Traditional Residence hall,220,4,18 x 12,"Continuing students, First-year students.",Undergraduate Academic Year (Two Semesters)
-Morrow Suites ,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Nicholas Hall ,Traditional Residence Hall,230,3,11 x 16,"First-year students, Transfer students",Undergraduate Academic Year (Two Semesters)
-Richardson Apartments,Apartment,522,3,11 x 18,Continuing students,Undergraduate Academic Year (Two Semesters)
-Silvers Apartments,Apartment,475,4,12 x 16,Continuing students,Undergraduate Academic Year (Two Semesters)
-Thomas Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
-Winkler Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+Campus,Hall,Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
+
+Cook/Douglass,Helyar House,Traditional Residence Hall,40,2,12 x 15,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Henderson Apartments,Apartment,274,4,12 x 16,"Continuing students, Douglass Residential College (DRC)",Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Jameson Hall ,Traditional Residence Hall,280," Jameson G (2 Floors), Jameson W (3 Floors)",Varies,"Continuing students, Douglass Residential College (women only)",Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Katzenbach Hall,Traditional Residence Hall,236,4,11 x 14,"Douglass Residential College (Co-ed), First-year students",Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Lippincott Hall ,Traditional Residence Hall,238,4,11 x 14,First-year students,Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,New Gibbons Hall,Traditional Residence Hall,442,3,13 x 16,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
+,Livingston Apartments
+Cook/Douglass,Newell Apartments,Apartment,982,2,13x 11,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Nicholas Hall ,Traditional Residence Hall,230,3,11 x 16,"First-year students, Transfer students",Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Perry Hall,Traditional Residence Hall,174,4,11 x 18,First-year students,Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Starkey Apartments,Apartment,384 (undergraduates/graduates),3,11 x 18,"Continuing students, Single graduate students","Undergraduate Academic Year (Two Semesters), Graduate Full Calendar Year ï¿½ 12 Month Contracts (Two semesters and all breaks)"
+
+Cook/Douglass,Voorhees Hall,Traditional Residence Hall,222,4,11 x 16,First-year students,Undergraduate Academic Year (Two Semesters)
+
+Cook/Douglass,Woodbury Bunting-Cobb Hall,Traditional Residence Hall, 228,3,11 x 16,"First-year students, Douglass Residential College (women only), Continuing students",Undergraduate Academic Year (Two Semesters)
+
+Livingston,ï¿½Livingston Apartments,Apartments,1488,Up to 7,Varies,Continuing Students; Single Graduate,"Undergraduate Academic Year (9 months; two semesters); Graduate Academic Year (9 months); Graduate Full Calendar Year (12 months, two semesters and all breaks)"
+
+Livingston,Lynton Towers (North and South),Traditional Residence Hall,343,7,Varies,First-year and continuing students,Undergraduate Academic Year (Two Semesters)
+
+Livingston,Sojourner Truth Apartments,Traditional Residence Hall,343,7,Varies, First-year and continuing students,Undergraduate Academic Year (Two Semesters)
+
+Livingston,Quad I,Traditional Residence Hall,468,5,14 x 15,First-year and continuing students,Undergraduate Academic Year (Two semesters)
+
+Livingston,Quad II,Traditional Residence Hall,505,5,14 x 15,First-year and continuing students,Undergraduate Academic Year (Two semesters)
+
+Livingston,Quad III,Traditional Residence Hall,494,5,14 x 15, First-year and continuing students,Undergraduate Academic Year (Two semesters)
+
+College Ave,Brett Hall,Traditional Residence Hall,216,4,16 x 12,"Continuing students, Honors students",Undergraduate Academic Year (Two Semesters)
+
+College Ave,Campbell Hall,Traditional Residence Hall,328,6,19 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Clothier Hall,Traditional Residence Hall,378,8,16 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Demarest Hall,Traditional Residence Hall,170,3,Varies,"Continuing students, First-year students",Undergraduate Academic Year (Two Semesters)
+
+College Ave,Frelinghuysen Hall,Traditional Residence Hall,328,6,19 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Hardenbergh Hall,Traditional Residence Hall,328,6,19 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Hegeman Hall,Traditional Residence Hall,73,3,Varies,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Honors College ,Traditional Residence Hall,542,5 (4 residential),Varies,First-year Honors College students,Undergraduate Academic Year (Two semesters)
+
+College Ave,Leupp Hall,Traditional Residence Hall,39,3,18 x 11,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Mettler Hall ,Traditional Residence Hall, 202,4,16 x 12,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
+
+College Ave,Pell Hall,Traditional Residence Hall,60,3,19 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+College Ave, Sojourner Truth Apartments,Apartment,436,13 residential floors,Varies,Continuing students,Undergraduate Academic Year (9 month ï¿½ Two Semesters)
+
+College Ave,Stonier Hall,Traditional Residence Hall,170,5,16 x 12,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
+
+College Ave,Tinsley Hall,Traditional Residence Hall,203,4,16 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,University Center at Easton Avenue Apartments,Apartment,649,12,12 x 18,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+College Ave,Wessels Hall ,Traditional Residence Hall,60,3,19 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Allen Hall,Traditional Residence Hall,217,4,18 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Barr Hall,Traditional Residence Hall,220,4,18 x 12,Special Interest Section,Undergraduate Academic Year (Two Semesters)
+
+Busch,"Busch Engineering, Science and Technology (B.E.S.T) Hall",Suite,499,4,273 square feet,"First year & continuing students in the schools of Pharmacy, Engineering, or School of Arts & Scienceswith an interest in science.",Undergraduate Academic Year (Two Semesters)
+
+Busch,Buell Apartmentsï¿½,Apartment,348,3,9 x 15,Single graduate students,"Graduate Full Calendar Year ï¿½ 12 Month Contracts (Two semesters and all breaks), Graduate Academic Year ï¿½ 9 Month Contracts (Two semesters and breaks)"
+
+Busch,Crosby Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Johnson Apartments,Apartment,136,2,10 x 11,Single graduate students,Graduate Full Calendar Year ï¿½ 12 Month Contracts (Two semesters and all breaks)
+
+Busch,Judson Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Mattia Hall,Traditional Residence Hall,221,4,18 x 12,First-year students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Marvin Apartments,Apartment,100,3,15 x 11,Graduate Family,Family Apartments (Monthly Rent)
+
+Busch,McCormick Suites,Suite,288,10,18 x 12,"Continuing students, First-year students, Special Interest Section",Undergraduate Academic Year (Two Semesters)
+
+Busch,Metzger Hall,Traditional Residence hall,220,4,18 x 12,"Continuing students, First-year students.",Undergraduate Academic Year (Two Semesters)
+
+Busch,Morrow Suites ,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Nicholas Hall ,Traditional Residence Hall,230,3,11 x 16,"First-year students, Transfer students",Undergraduate Academic Year (Two Semesters)
+
+Busch,Richardson Apartments,Apartment,522,3,11 x 18,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Silvers Apartments,Apartment,475,4,12 x 16,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Thomas Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+
+Busch,Winkler Suites,Suite,177,4,18 x 12,Continuing students,Undergraduate Academic Year (Two Semesters)
+

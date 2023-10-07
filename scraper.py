@@ -12,7 +12,7 @@ liviBuildings = ['Livingston Apartments', 'Lynton Towers (North)', 'Lynton Tower
 collegeBuildings = ['brett', 'campbell', 'clothier', 'demarest', 'frelinghuysen', 'hardenbergh', 'hegeman', 'honors college residence hall', 'leupp', 'mettler', 'pell', 'sojourner_truth', 'stonier', 'tinsley', 'university center', 'wessels']
 buschBuildings = ['allen', 'barr', 'busch-engineering-science-and-technology-best-hall', 'buell', 'crosby', 'johnson', 'judson', 'mattia', 'marvin', 'mccormick', 'metzger', 'morrow', 'nicholas', 'richardson', 'silvers', 'thomas', 'winkler']
 
-buildingArr = [cookdougBuildings, liviBuildings, collegeBuildings, buschBuildings]
+buildingArr = [ cookdougBuildings, liviBuildings, collegeBuildings, buschBuildings]
 campuses = ['Cook/Douglass', 'Livingston', 'College Ave', 'Busch']
 
 index = 0
