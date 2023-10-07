@@ -1,6 +1,19 @@
-Hall,Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
-Buell Apartmentsï¿½
-Hall,Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
-
-Buell Apartmentsï¿½,Apartment,348,3,9 x 15,Single graduate students,"Graduate Full Calendar Year ï¿½ 12 Month Contracts (Two semesters and all breaks), Graduate Academic Year ï¿½ 9 Month Contracts (Two semesters and breaks)"
-
+Hall,Type,Max Students,# of Floors,Avg Room Size,Availability,Contract Type
+Helyar House,Traditional Residence Hall,40,2,12 x 15,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
+Henderson Apartments,Apartment,274,4,12 x 16,"Continuing students, Douglass Residential College (DRC)",Undergraduate Academic Year (Two Semesters)
+Jameson Hall ,Traditional Residence Hall,280," Jameson G (2 Floors), Jameson W (3 Floors)",Varies,"Continuing students, Douglass Residential College (women only)",Undergraduate Academic Year (Two Semesters)
+Katzenbach Hall,Traditional Residence Hall,236,4,11 x 14,"Douglass Residential College (Co-ed), First-year students",Undergraduate Academic Year (Two Semesters)
+Lippincott Hall ,Traditional Residence Hall,238,4,11 x 14,First-year students,Undergraduate Academic Year (Two Semesters)
+New Gibbons Hall,Traditional Residence Hall,442,3,13 x 16,"First-year students, Continuing students",Undergraduate Academic Year (Two Semesters)
+Newell Apartments,Apartment,982,2,13x 11,Continuing students,Undergraduate Academic Year (Two Semesters)
+Nicholas Hall ,Traditional Residence Hall,230,3,11 x 16,"First-year students, Transfer students",Undergraduate Academic Year (Two Semesters)
+Perry Hall,Traditional Residence Hall,174,4,11 x 18,First-year students,Undergraduate Academic Year (Two Semesters)
+Starkey Apartments,Apartment,384 (undergraduates/graduates),3,11 x 18,"Continuing students, Single graduate students","Undergraduate Academic Year (Two Semesters), Graduate Full Calendar Year – 12 Month Contracts (Two semesters and all breaks)"
+Voorhees Hall,Traditional Residence Hall,222,4,11 x 16,First-year students,Undergraduate Academic Year (Two Semesters)
+Woodbury Bunting-Cobb Hall,Traditional Residence Hall, 228,3,11 x 16,"First-year students, Douglass Residential College (women only), Continuing students",Undergraduate Academic Year (Two Semesters)
+ Livingston Apartments,Apartments,1488,Up to 7,Varies,Continuing Students; Single Graduate,"Undergraduate Academic Year (9 months; two semesters); Graduate Academic Year (9 months); Graduate Full Calendar Year (12 months, two semesters and all breaks)"
+Lynton Towers (North and South),Traditional Residence Hall,343,7,Varies,First-year and continuing students,Undergraduate Academic Year (Two Semesters)
+Lynton Towers (North and South),Traditional Residence Hall,343,7,Varies, First-year and continuing students,Undergraduate Academic Year (Two Semesters)
+Quad I,Traditional Residence Hall,468,5,14 x 15,First-year and continuing students,Undergraduate Academic Year (Two semesters)
+Quad II,Traditional Residence Hall,505,5,14 x 15,First-year and continuing students,Undergraduate Academic Year (Two semesters)
+Quad III,Traditional Residence Hall,494,5,14 x 15, First-year and continuing students,Undergraduate Academic Year (Two semesters)
