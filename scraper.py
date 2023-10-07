@@ -15,7 +15,7 @@ buschBuildings = ['allen', 'barr', 'busch-engineering-science-and-technology-bes
 buschBuildings1 = ['mccormick']
 
 collegeBuildings1 = ['sojourner_truth']
-campusArr = [collegeBuildings]
+campusArr = [liviBuildings]
 
 for campus in campusArr:
     
