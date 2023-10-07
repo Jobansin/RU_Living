@@ -2,6 +2,7 @@ import setup
 from bs4 import BeautifulSoup
 import requests
 import csv
+#import array
 
 print("Installing packages") 
 #setup.install()
@@ -31,18 +32,15 @@ writer.writerow(['Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availa
 
 infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p')
 
-
+dataArray = []
+type = maxStudents = floors = rmSize = avail = contract = None
 for info in infoAll[1:]:
-    type = maxStudents = floors = rmSize = avail = contract = None
     
     infoSplit = info.text.split(":") #split by the :
-    infoSplit = infoSplit[1].replace("\xa0","")
+    data = infoSplit[1].replace("\xa0","")
     
-    type = infoSplit
-    
-    print(type)
-    #for split in infoSplit[1:]:
-     #   print(split)
+    dataArray.append(data)
 
- 
-    
+
+
+print(dataArray)
