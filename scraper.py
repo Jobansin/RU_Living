@@ -5,18 +5,21 @@ import csv
 #creating CSV
 file = open('output.csv', 'w')
 writer = csv.writer(file)
-writer.writerow(['Hall', 'Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availability', 'Contract Type'])
+writer.writerow(['Campus', 'Hall', 'Type', 'Max Students', '# of Floors', 'Avg Room Size', 'Availability', 'Contract Type'])
 
 cookdougBuildings = ['Helyar', 'Henderson', 'Jameson', 'Katzenbach', 'Lippincott', 'New Gibbons', 'Newell', 'Nicholas', 'Perry', 'Starkey', 'Voorhees', 'Woodbury Bunting-Cobb']
 liviBuildings = ['Livingston Apartments', 'Lynton Towers (North)', 'Lynton Towers (South)','Quad I', 'Quad II', 'Quad III']
 collegeBuildings = ['brett', 'campbell', 'clothier', 'demarest', 'frelinghuysen', 'hardenbergh', 'hegeman', 'honors college residence hall', 'leupp', 'mettler', 'pell', 'sojourner_truth', 'stonier', 'tinsley', 'university center', 'wessels']
 buschBuildings = ['allen', 'barr', 'busch-engineering-science-and-technology-best-hall', 'buell', 'crosby', 'johnson', 'judson', 'mattia', 'marvin', 'mccormick', 'metzger', 'morrow', 'nicholas', 'richardson', 'silvers', 'thomas', 'winkler']
 
-campusArr = [cookdougBuildings, liviBuildings, collegeBuildings, buschBuildings]
+buildingArr = [cookdougBuildings, liviBuildings, collegeBuildings, buschBuildings]
+campuses = ['Cook/Douglass', 'Livingston', 'College Ave', 'Busch']
 
-for campus in campusArr:
+index = 0
+for campus in buildingArr:
     
     for building in campus:
+        
         placeURL = "http://ruoncampus.rutgers.edu/" + building.replace(" ","-") #getting urls
 
         #getting htmls
@@ -31,10 +34,12 @@ for campus in campusArr:
         infoAll = residenceSoup.findAll('div', attrs={"class":"wpb_wrapper"})[6].findAll('p') #overview data in p headers
         dataArray = []
 
+        #get campus location
+        dataArray.append(campuses[index]) 
+            
         #get the name from the first        
         name = infoAll[0].find('span').text
         dataArray.append(name)
-        print(name)
         
         if(name.find("Sojourner") != -1): #has an extra paragraph in the front, so offset the data by one
             infoAll = infoAll[1:]
@@ -48,3 +53,5 @@ for campus in campusArr:
             dataArray.append(data) #add to array to be saved and pushed later
 
         writer.writerow(dataArray) #write it to the csv
+        
+    index += 1
