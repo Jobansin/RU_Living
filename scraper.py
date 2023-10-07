@@ -10,11 +10,12 @@ writer.writerow(['Hall', 'Type', 'Max Students', '# of Floors', 'Avg Room Size',
 cookdougBuildings = ['Helyar', 'Henderson', 'Jameson', 'Katzenbach', 'Lippincott', 'New Gibbons', 'Newell', 'Nicholas', 'Perry', 'Starkey', 'Voorhees', 'Woodbury Bunting-Cobb']
 liviBuildings = ['Livingston Apartments', 'Lynton Towers (North)', 'Lynton Towers (South)','Quad I', 'Quad II', 'Quad III']
 collegeBuildings = ['brett', 'campbell', 'clothier', 'demarest', 'frelinghuysen', 'hardenbergh', 'hegeman', 'honors college residence hall', 'leupp', 'mettler', 'pell', 'sojourner_truth', 'stonier', 'tinsley', 'university center', 'wessels']
-buschBuildings = ['allen', 'barr', 'best', 'buell', 'crosby', 'johnson', 'judson', 'mattia', 'marvin', 'mccormick', 'metzger', 'morrow', 'nicholas', 'richardson', 'silvers', 'thomas', 'winkler']
+buschBuildings = ['allen', 'barr', 'busch-engineering-science-and-technology-best-hall', 'buell', 'crosby', 'johnson', 'judson', 'mattia', 'marvin', 'mccormick', 'metzger', 'morrow', 'nicholas', 'richardson', 'silvers', 'thomas', 'winkler']
 
+buschBuildings1 = ['mccormick']
 
 collegeBuildings1 = ['sojourner_truth']
-campusArr = [collegeBuildings]
+campusArr = [buschBuildings]
 
 for campus in campusArr:
     
@@ -42,23 +43,26 @@ for campus in campusArr:
         
         #infoAll[:7]
         #infoAll[-6:]
+        
+        #print(infoAll)
+        
         name = infoAll[0].find('span').text
         dataArray.append(name)
         print(name)
         
-        for info in infoAll[-6:]: #the quads have extra stuff at the end of their html
+        for info in infoAll[1:7]: #the quads have extra stuff at the end of their html and mccormick (busch)
             
+            #print(infoAll)
             #if counter == 0: #get the name
-              #  data = info.find('span').text#.replace("&nbsp","")
-             #   counter += 1
+            #     counter += 1
                # print(data)
                 #dataArray.append(data)
                 #continue
-            
+            #print(info.text)
             infoSplit = info.text.split(":") #split by the : and get rest of attributes
-            #print(infoSplit)
+            #print(info)
             data = infoSplit[1].replace("\xa0","")
-            
+            #print(data)
             dataArray.append(data)
 
         writer.writerow(dataArray) #write it to the csv
