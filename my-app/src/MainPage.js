@@ -5,7 +5,7 @@ const MainPage = ({onStartTest}) => {
         <div>
             <div class="logo">
                 <img src="ru.png" width="120px" height="60px"/>
-                <h1 id="title">Living</h1>
+                <h1 class="title">Living</h1>
             </div>
             <div class="container">
                 <div class="wrapper">

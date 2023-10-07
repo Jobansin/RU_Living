@@ -22,7 +22,7 @@ code {
   padding: 20px;
 }
 
-#title {
+.title {
   font-size: 40px;
   margin: 0;
 }
@@ -98,4 +98,8 @@ h2 {
   80% {
     transform: translate(-300%);
   }
+}
+
+input.sd-btn.sd-btn--action.sd-navigation__complete-btn {
+  background-color:#a00229;
 }

@@ -115,6 +115,18 @@ const surveyJson = {
     ],
     isRequired: true
   },
+  {
+    type: "radiogroup",
+    name: "town",
+    title: "What type of housing do you prefer?",
+    choices: [
+      { text: 'Traditional Residence Hall' },
+      { text: 'Apartment' },
+      { text: 'Suite' },
+      { text: 'neutral' },
+    ],
+    isRequired: true
+  },
 ]
 };
 
@@ -143,7 +155,13 @@ function App() {
           <p>{surveyResults}</p>
         </div>
       ) : (
-        <Survey model={survey} />
+        <div>
+          <div class="logo">
+            <img src="ru.png" width="120px" height="60px"/>
+            <h1 class="title">Living</h1>
+          </div>
+          <Survey model={survey}/>
+        </div> 
       )
       ) : (
         <MainPage onStartTest={handleStartForm}/>
