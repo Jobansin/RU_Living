@@ -1,186 +1,59 @@
 import 'survey-core/defaultV2.min.css';
 import { Model } from 'survey-core';
 import { Survey } from 'survey-react-ui';
-import { major } from './majors';
 import { useCallback, useState } from 'react';
 import MainPage from './MainPage';
-
-const surveyJson = {
-  pages: [
-  {
-    elements: 
-    [{
-      type: "radiogroup",
-      name: "year",
-      title: "What year are you?",
-      choices: [
-        { text: 'freshman' },
-        { text: 'sophomore' },
-        { text: 'junior' },
-        { text: 'senior' },
-        { text: 'graduate' },
-      ],
-      isRequired: true
-    }]
-  },
-  {
-    elements:
-    [{
-      name: "environment",
-      title: "Do you prefer a quiet or loud environment?",
-      type: "radiogroup",
-      choices: [
-        { text: "quiet" },
-        { text: "lively" },
-        { text: "neutral" },
-    ],
-    isRequired: true
-    }]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "town",
-        title: "Do you prefer a campus that is downtown or not?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-          { text: 'neutral' },
-        ],
-        isRequired: true
-      },
-    ]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "campus",
-        title: "Do you prefer dorming in a campus near your classes?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-        ],
-        isRequired: true
-      },
-      {
-        type: "checkbox",
-        name: "campusName",
-        visibleIf: "{campus} == 'yes'",
-        title: "Enter your desired campus:",
-        isRequired: true,
-        choices: [
-          { text: 'Livingston' },
-          { text: 'Busch' },
-          { text: 'College Ave' },
-          { text: 'Cook/Doug' },
-        ]
-      },
-    ]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "major",
-        title: "Do you prefer dorming with people that have the same major as you?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-        ],
-        isRequired: true
-      },
-      {
-        type: "dropdown",
-        name: "majorName",
-        visibleIf: "{major} == 'yes'",
-        title: "Enter your major:",
-        isRequired: true,
-        choices: major
-      },
-    ]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "food",
-        title: "Do you prefer a campus with a lot of food options?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-        ],
-        isRequired: true
-      }
-    ]
-  },
-  {
-    elements: 
-    [
-      {
-        type: "radiogroup",
-        name: "personality",
-        title: "Do you prefer a person with a similar personality as you?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-        ],
-        isRequired: true
-      },
-      {
-        type: "dropdown",
-        name: "personalityName",
-        visibleIf: "{personality} == 'yes'",
-        title: "Enter your personality:",
-        isRequired: true,
-        choices: [
-          { text: 'Extrovert' },
-          { text: 'Introvert' },
-          { text: 'Both' },
-        ]
-      },
-    ]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "housing",
-        title: "What type of housing do you prefer?",
-        choices: [
-          { text: 'Traditional Residence Hall' },
-          { text: 'Apartment' },
-          { text: 'Suite' },
-          { text: 'neutral' },
-        ],
-        isRequired: true
-      },
-    ]
-  }
-  ]
-  
-}
+import { surveyJson } from './surveyJson';
+import axios from 'axios';
 
 function App() {
   const [surveyResults, setSurveyResults] = useState(null);
   const [formStarted, setFormStarted] = useState(false)
+  const [dormData, setDormData] = useState(null);
   const survey = new Model(surveyJson);
 
   const onComplete = useCallback((sender) => {
-    setSurveyResults(JSON.stringify(sender.data));
+    const results = JSON.stringify(sender.data);
+    setSurveyResults(results);
+    fetchDorms(results);
   }, []);
-
-
 
   const handleStartForm = () => {
     setFormStarted(true)
   }
+
+  const fetchDorms = async (results) => {
+  try {
+    const response = await fetch("http://localhost:1234/dorm-result", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(results),
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const responseData = await response.text(); // Parse the response body as text
+    console.log(responseData); // Log the response data
+
+    setDormData(responseData); // Return the response data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow the error for handling in your component
+  }
+};
+
+        
+    //)
+    //.catch(error => {
+    //  console.error('Error retrieving data:', error);
+    //});    
+    //const data = await response.json(); 
+    //console.log(data)
+
 
   survey.onComplete.add(onComplete);
   return (
@@ -188,8 +61,7 @@ function App() {
       {formStarted ? (
         surveyResults ? (
         <div>
-          <h2>Survey Results:</h2>
-          <p>{surveyResults}</p>
+          <p>{dormData}</p>
         </div>
       ) : (
         <div>
