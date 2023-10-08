@@ -22,14 +22,17 @@ except Exception as e:
 db = client[os.environ['DATABASE_NAME']] #select database
 collection = db[os.environ['COLLECTION_NAME']] #select collection
 
+collection.delete_many({}) #fresh start
 headers = []
 counter = 0
 with open("output.csv", "r") as file:
     reader = csv.reader(file) #open csv
+    objectToPush = '{}'
     
     for row in reader: 
         if (counter == 0): #get the first row of headers
             headers = row
+            headers[1] = '_id'
             counter += 1
             continue
 
@@ -40,7 +43,7 @@ with open("output.csv", "r") as file:
                 temp.update({headers[j] : row[j]}) #get it linked to the proper data and push it to the JSON
             
             objectToPush = temp 
-            collection.insert_one(objectToPush) #push to database #TODO SHOULD PROB MAKE THE HALLS THE UNIQUE _id
+            collection.insert_one(objectToPush, { 'upsert': 'true'}) #push to database #TODO SHOULD PROB MAKE THE HALLS THE UNIQUE _id
             objectToPush = '{}' #clear the JSON for next loop
             
         counter += 1
