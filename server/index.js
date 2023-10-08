@@ -28,6 +28,13 @@ app.get('/dorm-result', (req, res) => {
         }
     }
 
+    _db.collection("Dorms").findOne({}).then((item) => {
+        console.log(typeof(item));
+        res.send(item);
+    }
+
+    )
+    
     
 
 
@@ -35,7 +42,7 @@ app.get('/dorm-result', (req, res) => {
     //get all campus
     //filter from grade
 
-    res.send(JSONbody)
+    
 
     //    Call MongoDB and filter the user list to just email for response 
 });
