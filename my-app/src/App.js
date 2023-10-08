@@ -198,6 +198,7 @@ function App() {
             <h1 class="title">Living</h1>
           </div>
           <Survey model={survey}/>
+          <img id="bot" src="scarlet.png" height="150px"/>
         </div> 
       )
       ) : (

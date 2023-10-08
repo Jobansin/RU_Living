@@ -108,10 +108,39 @@ input.sd-btn.sd-btn--action.sd-navigation__complete-btn {
   background-color:#a00229;
 }
 
-#footer {
+.footer {
   position: absolute;
   bottom: 0;
   transform: translate(-50%, -50%);
   left: 50%;
   font-weight: bold;
+}
+
+#bot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 85%;
+}
+
+#icons {
+  display: flex;
+  gap: 2em;
+  padding: 2em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 90%;
+}
+
+#icons a {
+  color: black
+}
+
+#icons svg {
+  cursor: pointer;
+}
+
+#icons svg:hover {
+  color: gray;
 }

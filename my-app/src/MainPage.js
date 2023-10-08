@@ -1,4 +1,5 @@
 import React from "react";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const MainPage = ({onStartTest}) => {
     return (
@@ -19,7 +20,11 @@ const MainPage = ({onStartTest}) => {
                 <h2>The Perfect Dorm for you</h2>
                 <button id="dorm" onClick={onStartTest}>Find me a dorm</button>
             </div>
-            <footer id="footer">Copyright © 2023 David Harianto, Isaiah Pajaro, Joban Singh. All rights reserved.</footer>
+            <div id="icons">
+                <a href="https://github.com/Jobansin/RU_Living"><FaGithub size="3em"/></a>
+                <a href="https://linktr.ee/RULiving"><FaLink size="3em"/></a>
+            </div>
+            <footer class="footer">Copyright © 2023 David Harianto, Isaiah Pajaro, Joban Singh. All rights reserved.</footer>
         </div>
     );
 };
