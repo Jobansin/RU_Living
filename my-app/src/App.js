@@ -60,7 +60,7 @@ const surveyJson = {
     isRequired: true
   },
   {
-    type: "dropdown",
+    type: "checkbox",
     name: "campusName",
     visibleIf: "{campus} == 'yes'",
     title: "Enter your desired campus:",
