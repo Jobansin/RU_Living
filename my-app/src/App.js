@@ -11,7 +11,7 @@ const surveyJson = {
     elements: 
     [{
       type: "radiogroup",
-      name: "town",
+      name: "year",
       title: "What year are you?",
       choices: [
         { text: 'freshman' },
@@ -42,21 +42,14 @@ const surveyJson = {
     [
       {
         type: "radiogroup",
-        name: "major",
-        title: "Do you prefer dorming with people that have the same major as you?",
+        name: "town",
+        title: "Do you prefer a campus that is downtown or not?",
         choices: [
           { text: 'yes' },
           { text: 'no' },
+          { text: 'neutral' },
         ],
         isRequired: true
-      },
-      {
-        type: "dropdown",
-        name: "majorName",
-        visibleIf: "{major} == 'yes'",
-        title: "Enter your major:",
-        isRequired: true,
-        choices: major
       },
     ]
   },
@@ -86,6 +79,44 @@ const surveyJson = {
           { text: 'Cook/Doug' },
         ]
       },
+    ]
+  },
+  {
+    elements:
+    [
+      {
+        type: "radiogroup",
+        name: "major",
+        title: "Do you prefer dorming with people that have the same major as you?",
+        choices: [
+          { text: 'yes' },
+          { text: 'no' },
+        ],
+        isRequired: true
+      },
+      {
+        type: "dropdown",
+        name: "majorName",
+        visibleIf: "{major} == 'yes'",
+        title: "Enter your major:",
+        isRequired: true,
+        choices: major
+      },
+    ]
+  },
+  {
+    elements:
+    [
+      {
+        type: "radiogroup",
+        name: "food",
+        title: "Do you prefer a campus with a lot of food options?",
+        choices: [
+          { text: 'yes' },
+          { text: 'no' },
+        ],
+        isRequired: true
+      }
     ]
   },
   {
@@ -120,38 +151,7 @@ const surveyJson = {
     [
       {
         type: "radiogroup",
-        name: "food",
-        title: "Do you prefer a campus with a lot of food options?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-        ],
-        isRequired: true
-      }
-    ]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "town",
-        title: "Do you prefer a campus that is downtown or not?",
-        choices: [
-          { text: 'yes' },
-          { text: 'no' },
-          { text: 'neutral' },
-        ],
-        isRequired: true
-      },
-    ]
-  },
-  {
-    elements:
-    [
-      {
-        type: "radiogroup",
-        name: "town",
+        name: "housing",
         title: "What type of housing do you prefer?",
         choices: [
           { text: 'Traditional Residence Hall' },
