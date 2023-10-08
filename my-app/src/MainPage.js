@@ -17,8 +17,9 @@ const MainPage = ({onStartTest}) => {
             </div>
             <div class="text">
                 <h2>The Perfect Dorm for you</h2>
-                <button id="dorm" onClick={onStartTest}>Yes Please</button>
+                <button id="dorm" onClick={onStartTest}>Find me a dorm</button>
             </div>
+            <footer id="footer">Copyright © 2023 David Harianto, Isaiah Pajaro, Joban Singh. All rights reserved.</footer>
         </div>
     );
 };
