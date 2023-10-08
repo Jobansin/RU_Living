@@ -41,3 +41,10 @@ app.get('/dorm-result', (req, res) => {
 });
 
 app.listen(1234);
+
+
+
+
+//npm i 
+//npm install nodemon -g
+//nodemon index.js
