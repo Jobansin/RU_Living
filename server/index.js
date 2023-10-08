@@ -36,9 +36,14 @@ app.post('/dorm-result', (req, res) => {
     _db.collection("Dorms").findOne({}).then((item) => {
         console.log((item));
         //res.json({requestBody: req.body});
+
+        
+        res.end("The best dorm for you is the " + item._id + "located on " + item.Campus + 
+                "\n Type: " + item.Type +
+                "\n Availability: " + item.Availability );
     })
     
-    res.end("hello world");
+    
     
 
 
