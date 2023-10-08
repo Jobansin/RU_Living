@@ -4,7 +4,7 @@ import { Survey } from 'survey-react-ui';
 import { useCallback, useState } from 'react';
 import MainPage from './MainPage';
 import { surveyJson } from './surveyJson';
-import axios from 'axios';
+//import axios from 'axios';
 
 function App() {
   const [surveyResults, setSurveyResults] = useState(null);
