@@ -31,7 +31,7 @@ const surveyJson = {
       type: "radiogroup",
       choices: [
         { text: "quiet" },
-        { text: "loud" },
+        { text: "lively" },
         { text: "neutral" },
     ],
     isRequired: true
