@@ -39,7 +39,7 @@ app.post('/dorm-result', (req, res) => {
         //res.json({requestBody: req.body});
 
         
-        res.end("The best dorm for you is the " + item._id + "located on " + item.Campus + 
+        res.end("The best dorm for you is the " + item._id + " located on " + item.Campus + 
                 "\n Type: " + item.Type +
                 "\n Availability: " + item.Availability );
     })

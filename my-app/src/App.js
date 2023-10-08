@@ -39,7 +39,7 @@ function App() {
     const responseData = await response.text(); // Parse the response body as text
     console.log(responseData); // Log the response data
 
-    return responseData; // Return the response data if needed
+    setDormData(responseData); // Return the response data if needed
   } catch (error) {
     console.error("Error:", error);
     throw error; // Rethrow the error for handling in your component
@@ -61,8 +61,7 @@ function App() {
       {formStarted ? (
         surveyResults ? (
         <div>
-          <h2>Survey Results:</h2>
-          {/* <p>{dormData}</p> */}
+          <p>{dormData}</p>
         </div>
       ) : (
         <div>
