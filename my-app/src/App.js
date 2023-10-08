@@ -11,7 +11,7 @@ const surveyJson = {
     elements: 
     [{
       type: "radiogroup",
-      name: "town",
+      name: "year",
       title: "What year are you?",
       choices: [
         { text: 'freshman' },
@@ -151,7 +151,7 @@ const surveyJson = {
     [
       {
         type: "radiogroup",
-        name: "town",
+        name: "housing",
         title: "What type of housing do you prefer?",
         choices: [
           { text: 'Traditional Residence Hall' },
