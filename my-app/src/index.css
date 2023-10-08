@@ -23,17 +23,19 @@ code {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 45px;
   margin: 0;
+  font-weight: 900;
 }
 
 #dorm {
   color: white;
   background-color: #CC0033;
   font-size: 2em;
-  border-radius: 5px;
+  border-radius: 10px;
   font-weight: bold;
   padding: 5px;
+  border: 1px solid black;
 }
 
 #dorm:hover {
@@ -58,6 +60,8 @@ code {
   top: 50%;
   left: 50%;
   width: 70%;
+  border: 10px solid black;
+  box-shadow: 10px 5px 5px lightgray;
 }
 
 .text {
@@ -102,4 +106,12 @@ h2 {
 
 input.sd-btn.sd-btn--action.sd-navigation__complete-btn {
   background-color:#a00229;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  font-weight: bold;
 }
