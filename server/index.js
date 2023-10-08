@@ -4,7 +4,8 @@ const express = require("express");
 const app = express();
 require('dotenv').config()
 const {MongoClient} = require ('mongodb');
-
+const cors = require('cors');
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 const uri = process.env.DATABASE_URL;
 const client = new MongoClient(uri, {});

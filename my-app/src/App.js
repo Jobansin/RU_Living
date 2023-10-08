@@ -13,21 +13,22 @@ function App() {
   const survey = new Model(surveyJson);
 
   const onComplete = useCallback((sender) => {
-    setSurveyResults(JSON.stringify(sender.data));
-    fetchDorms(surveyResults);
+    const results = JSON.stringify(sender.data);
+    setSurveyResults(results);
+    fetchDorms(results);
   }, []);
 
   const handleStartForm = () => {
     setFormStarted(true)
   }
 
-  const fetchDorms =  ((surveyResults) => {     //failed to fetch, is this the correct way to fetch
+  const fetchDorms =  ((results) => {     //failed to fetch, is this the correct way to fetch
     fetch("http://localhost:1234/dorm-result", { //if so, why are we getting errors (CORS maybe? idk what it is)
       method: "POST",                             //fetch is getting response of http://localhost:1234/dorm-result
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(surveyResults),
+      body: JSON.stringify(results),
     }).then((response) => {
       console.log(response)
     })
