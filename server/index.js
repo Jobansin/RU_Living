@@ -2,10 +2,11 @@
 
 const express = require("express");
 const app = express();
+require('dotenv').config()
 const {MongoClient} = require ('mongodb');
 
 
-const uri = "mongodb+srv://databaseAdmin:KeB6IptIdvYImr03@cluster0.lwqtjkc.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.DATABASE_URL;
 const client = new MongoClient(uri, {});
 
 var connected = false;
@@ -13,9 +14,6 @@ var _db;
 
 app.get('/dorm-result', (req, res) => { 
     
-
-   
-
     if (connected){
         console.log("Connection is made, going to reuse it")
     } 
@@ -23,12 +21,14 @@ app.get('/dorm-result', (req, res) => {
     {
         try{
             connected = client.connect();
-            _db = client.db("Dorms")
+            _db = client.db(process.env.DATABASE_NAME)
             console.log("New connection")
         } catch(e){
             console.log("ERROR: Connection to mongoDB failed")
         }
     }
+
+    
 
 
     //req body should have campus location, grade 
