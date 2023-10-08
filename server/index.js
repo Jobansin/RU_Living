@@ -33,7 +33,7 @@ app.post('/dorm-result', (req, res) => {
 
     //console.log(surveyAnswers)
 
-
+    
     _db.collection("Dorms").findOne({}).then((item) => {
         console.log((item));
         //res.json({requestBody: req.body});

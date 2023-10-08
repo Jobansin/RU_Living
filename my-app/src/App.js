@@ -22,17 +22,30 @@ function App() {
     setFormStarted(true)
   }
 
-  const fetchDorms =  ((results) => {     //failed to fetch, is this the correct way to fetch
-    fetch("http://localhost:1234/dorm-result", { //if so, why are we getting errors (CORS maybe? idk what it is)
-      method: "POST",                             //fetch is getting response of http://localhost:1234/dorm-result
+  const fetchDorms = async (results) => {
+  try {
+    const response = await fetch("http://localhost:1234/dorm-result", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(results),
-    }).then((response) => {
-      console.log(response)
-    })
-  })
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const responseData = await response.text(); // Parse the response body as text
+    console.log(responseData); // Log the response data
+
+    return responseData; // Return the response data if needed
+  } catch (error) {
+    console.error("Error:", error);
+    throw error; // Rethrow the error for handling in your component
+  }
+};
+
         
     //)
     //.catch(error => {
