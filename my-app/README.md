@@ -1,3 +1,11 @@
+# how to run
+
+1. cd into this directory
+2. npm i
+3. npm start
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
