@@ -7,6 +7,6 @@ Joban
 Isaiah
 David
 
-https://ru-living-frontend.vercel.app/ (unfinished)
+https://ru-living-frontend.vercel.app/ (link for frontend display only)
 
 ![image](https://github.com/Jobansin/RU_Living/assets/101820668/aa13fcd1-6f98-4cf5-9223-b5f8f28bad46)
